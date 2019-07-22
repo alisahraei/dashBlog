@@ -1,2 +1,86 @@
 
+.blogEx{
+	font-size: 1.7em;
+}
+.minimalW{
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
+}
+/*header*/
+.blogEx header.header{
+	text-align: center;
+	font-size: 1.2em;
+	margin: 70px auto;
+	user-select: none;
+}
+.blogEx header.header h1{
+	margin: 0;
+}
+.blogEx header.header h1 a{
+	font-weight: 300;
+	transition: 0.3s;
+}
+.blogEx header.header h2{
+	font-size: 1em;
+	font-weight: 100;
+}
+/*nav*/
+.blogEx nav.nav{
+	border-top: 1px solid #ecf0f1;
+	border-bottom: 1px solid #ecf0f1;
+	text-align: center;
+	margin:0 auto 2em;
+	user-select: none;
+	line-height: 2;
+}
+.blogEx nav.nav a{
+	padding: 0 0.5em;
+	display: inline-block;
+	transition: 0.3s;
+	font-weight: 100;
+}
+.blogEx nav.nav a:hover{
+	background-color: #ecf0f1;
+}
+.blogEx nav.nav a:focus{
+	background-color: #eee;
+}
 
+.blogEx article{
+	margin: 0 0 50px;
+	padding: 20px;
+}
+.blogEx article a:visited {
+    color: #22bb88;
+}
+.blogEx article h2{
+	margin: 0;
+	transition: 0.3s;
+}
+.blogEx article h2 a{
+	font-weight: 100;
+}
+.blogEx article .meta{
+	color:#95a5a6;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+.blogEx article .meta time{
+	font-weight: 100;
+}
+.blogEx article section p{
+	font-weight: 100;
+	margin: 1em 0;
+}
+.blogEx article .more{
+
+}
+
+.blogEx footer{
+	color: #899596;
+	background-color: rgba(0, 0, 0, 0.05);
+	margin: 4em 0 0;
+	padding: 2em;
+	text-align: center;
+}
