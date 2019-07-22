@@ -1,5 +1,22 @@
 {%extends display.main%}
 
 
-{%block bodd2%}
+{%block page%}
+{%set homePagePost = posts({"limit" : 10})%}
+{%for key, post in homePagePost%}
+      <article>
+        <header>
+          <h2><a href="{{url.kingdom}}">{{post.title}}</a></h2>
+          <div class="meta"><time datetime="{{post.publishdate}}">{{post.publishdate | dt}}</time></div>
+        </header>
+        <section>
+{%if post.meta.thumb%}
+          <img src="{{post.meta.thumb}}" alt="{{post.title}}">
+{%endif%}
+          <p>{{post.desc}}</p>
+          <div class="more"><a href="{{url.kingdom}}">{%trans "Keep Reading"%} <span class="sf-angle-double-right"></span></a></div>
+        </section>
+      </article>
+{%endfor%}
 {%endblock%}
+
