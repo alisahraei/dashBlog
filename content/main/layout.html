@@ -13,45 +13,23 @@
       <a href="{{url.kingdom}}/contact">{%trans "Contact"%}</a>
     </nav>
     <main class="minimalW">
-
+{%set homePagePost = posts({"limit" : 10})%}
+{%for key, value in homePagePost%}
       <article>
         <header>
-          <h2><a href="{{url.kingdom}}">Play 2.7.2 released!</a></h2>
-          <div class="meta"><time datetime="2019-05-08">08 May 2019</time></div>
+          <h2><a href="{{url.kingdom}}">{{value.title}}</a></h2>
+          <div class="meta"><time datetime="{{value.publishdate}}">{{value.publishdate | dt}}</time></div>
         </header>
         <section>
-          <p>Play 2.7.2 is virtually similar to Play 2.7.1, released a few days before. It mainly fixes a problem with play-docs artifact generation, but from the users' perspective, there are no substantial changes. For more details see the full list of changes.</p>
+          <p>{{value.desc}}</p>
           <div class="more"><a href="{{url.kingdom}}">{%trans "Keep Reading"%} <span class="sf-angle-double-right"></span></a></div>
         </section>
       </article>
-
-
-      <article>
-        <header>
-          <h2><a href="{{url.kingdom}}">Play 2.7.2 released!</a></h2>
-          <div class="meta"><time datetime="2019-05-08">08 May 2019</time></div>
-        </header>
-        <section>
-          <p>Play 2.7.2 is virtually similar to Play 2.7.1, released a few days before. It mainly fixes a problem with play-docs artifact generation, but from the users' perspective, there are no substantial changes. For more details see the full list of changes.</p>
-          <div class="more"><a href="{{url.kingdom}}">{%trans "Keep Reading"%} <span class="sf-angle-double-right"></span></a></div>
-        </section>
-      </article>
-
-
-      <article>
-        <header>
-          <h2><a href="{{url.kingdom}}">Play 2.7.2 released!</a></h2>
-          <div class="meta"><time datetime="2019-05-08">08 May 2019</time></div>
-        </header>
-        <section>
-          <p>Play 2.7.2 is virtually similar to Play 2.7.1, released a few days before. It mainly fixes a problem with play-docs artifact generation, but from the users' perspective, there are no substantial changes. For more details see the full list of changes.</p>
-          <div class="more"><a href="{{url.kingdom}}">{%trans "Keep Reading"%} <span class="sf-angle-double-right"></span></a></div>
-        </section>
-      </article>
+{%endfor%}
 
     </main>
     <footer>
-      <div class="copyright">{{site.title}} {{"now" | dt('Y')}}.</div>
+      <div class="copyright"><a href="{{url.kingdom}}">{{site.title}}</a></div>
 
     </footer>
   </div>
