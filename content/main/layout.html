@@ -14,14 +14,17 @@
     </nav>
     <main>
 {%set homePagePost = posts({"limit" : 10})%}
-{%for key, value in homePagePost%}
+{%for key, post in homePagePost%}
       <article>
         <header>
-          <h2><a href="{{url.kingdom}}">{{value.title}}</a></h2>
-          <div class="meta"><time datetime="{{value.publishdate}}">{{value.publishdate | dt}}</time></div>
+          <h2><a href="{{url.kingdom}}">{{post.title}}</a></h2>
+          <div class="meta"><time datetime="{{post.publishdate}}">{{post.publishdate | dt}}</time></div>
         </header>
         <section>
-          <p>{{value.desc}}</p>
+{%if post.meta.thumb%}
+          <img src="{{post.meta.thumb}}" alt="{{post.title}}">
+{%endif%}
+          <p>{{post.desc}}</p>
           <div class="more"><a href="{{url.kingdom}}">{%trans "Keep Reading"%} <span class="sf-angle-double-right"></span></a></div>
         </section>
       </article>

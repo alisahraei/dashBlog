@@ -79,9 +79,14 @@
 .blogEx article .meta time{
 	font-weight: 100;
 }
-.blogEx article section p{
+.blogEx article p{
 	font-weight: 100;
 	margin: 1em 0;
+}
+.blogEx article img{
+	width: 100%;
+	height: auto;
+	display: block;
 }
 .blogEx article .more{
 
