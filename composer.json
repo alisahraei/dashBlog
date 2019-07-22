@@ -1,0 +1,24 @@
+{
+    "name": "ermile/dashblog",
+    "description": "dash blog example",
+    "license": "MIT",
+    "type": "project",
+    "keywords": [
+        "php",
+        "framework"
+        "dash",
+        "siftal",
+        "blog",
+    ],
+    "authors": [
+        {
+            "name": "ermile",
+            "email": "info@ermile.com"
+        }
+    ],
+    "homepage": "https://blog.ermile.com",
+    "require": {
+        "php": ">=7.0",
+        "siftal": ">=4.2"
+    }
+}
