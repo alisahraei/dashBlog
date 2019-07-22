@@ -12,6 +12,7 @@ class view
 		\dash\data::page_desc(\dash\data::site_desc(). ' | '. \dash\data::site_slogan());
 		// we dont use js
 		\dash\data::include_js(false);
+		\dash\data::include_css(false);
 	}
 }
 ?>
