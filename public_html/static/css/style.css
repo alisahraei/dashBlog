@@ -8,43 +8,53 @@
 	margin: 0 auto;
 }
 /*header*/
-.blogEx header.header{
+.blogEx > header{
 	text-align: center;
 	font-size: 1.2em;
-	margin: 70px auto;
 	user-select: none;
+	max-width: 600px;
+	width: 90%;
+	margin: 70px auto;
 }
-.blogEx header.header h1{
+.blogEx > header h1{
 	margin: 0;
 }
-.blogEx header.header h1 a{
+.blogEx > header h1 a{
 	font-weight: 300;
 	transition: 0.3s;
 }
-.blogEx header.header h2{
+.blogEx > header h2{
 	font-size: 1em;
 	font-weight: 100;
 }
 /*nav*/
-.blogEx nav.nav{
+.blogEx > nav{
 	border-top: 1px solid #ecf0f1;
 	border-bottom: 1px solid #ecf0f1;
 	text-align: center;
 	margin:0 auto 2em;
 	user-select: none;
 	line-height: 2;
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
 }
-.blogEx nav.nav a{
+.blogEx > nav a{
 	padding: 0 0.5em;
 	display: inline-block;
 	transition: 0.3s;
 	font-weight: 100;
 }
-.blogEx nav.nav a:hover{
+.blogEx > nav a:hover{
 	background-color: #ecf0f1;
 }
-.blogEx nav.nav a:focus{
+.blogEx > nav a:focus{
 	background-color: #eee;
+}
+.blogEx .main{
+	max-width: 600px;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .blogEx article{

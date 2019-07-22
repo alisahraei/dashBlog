@@ -3,16 +3,16 @@
 {%block body%}
 
   <div class="blogEx">
-    <header class="header minimalW">
+    <header>
       <h1><a href="{{url.kingdom}}">{{site.title}}</a></h1>
       <h2>{{site.desc}}</h2>
     </header>
-    <nav class="nav minimalW">
+    <nav>
       <a href="{{url.kingdom}}">{%trans "Homepage"%}</a>
       <a href="{{url.kingdom}}/about">{%trans "About"%}</a>
       <a href="{{url.kingdom}}/contact">{%trans "Contact"%}</a>
     </nav>
-    <main class="minimalW">
+    <main>
 {%set homePagePost = posts({"limit" : 10})%}
 {%for key, value in homePagePost%}
       <article>
