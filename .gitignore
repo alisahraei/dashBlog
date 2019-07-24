@@ -6,6 +6,8 @@ desktop.ini
 *.me.*
 
 node_modules
+package-lock.json
+
 
 
 /public_html/files

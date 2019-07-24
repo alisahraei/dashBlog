@@ -1,9 +1,12 @@
 {
-  "name": "Dash Blog",
+  "name": "DashBlog",
   "version": "1.0.0",
   "homepage": "https://blog.ermile.com",
+  "repository": "github:Ermile/dashBlog",
+  "description": "A simple blog with Dash!",
+  "license": "MIT",
   "dependencies": {
-    "siftal": "^6.9.0",
-    "dash": "^18.0.0"
+    "dash": "^18.0.0",
+    "siftal": "^6.9.0"
   }
 }
