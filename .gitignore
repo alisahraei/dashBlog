@@ -4,6 +4,10 @@ desktop.ini
 *Thumbs.db
 *tg.json
 *.me.*
+
+node_modules
+
+
 /public_html/files
 /content/cronjob/*.txt
 /public_html/sitemap
