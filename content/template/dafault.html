@@ -72,8 +72,35 @@
 {%endblock%}
 
 
+
 {%block terms%}
-    {{block('datatablePosts')}}
+{%if datarow.type == 'cat'%}
+
+  {%set myPostByThisCat = posts({"cat" : datarow.slug})%}
+
+{%elseif datarow.type == 'tag' %}
+
+  {%set myPostByThisCat = posts({"tag" : datarow.slug})%}
+
+{%endif%}
+
+{%if myPostByThisCat %}
+<article class="postListPreview">
+  {%for key, value in myPostByThisCat%}
+    <section class="f">
+{%if value.meta.thumb%}
+      <div class="cauto s12 pRa10 txtC">
+        <a href="{{value.link}}"><img src="{{value.meta.thumb}}" alt="{{value.title}}" width="150px"></a>
+      </div>
+{%endif%}
+      <div class="c s12">
+        <h3><a href="{{value.link}}">{{value.title}}</a></h3>
+        <p>{{value.excerpt}}</p>
+      </div>
+    </section>
+  {%endfor%}
+</article>
+{%endif%}
 {%endblock%}
 
 
@@ -108,38 +135,6 @@
 {%endblock%}
 
 
-{%block datatablePosts%}
-
-{%if datarow.type == 'cat'%}
-
-  {%set myPostByThisCat = posts({"cat" : datarow.slug})%}
-
-{%elseif datarow.type == 'tag' %}
-
-  {%set myPostByThisCat = posts({"tag" : datarow.slug})%}
-
-{%endif%}
-
-{%if myPostByThisCat %}
-<article class="postListPreview">
-  {%for key, value in myPostByThisCat%}
-    <section class="f">
-{%if value.meta.thumb%}
-      <div class="cauto s12 pRa10 txtC">
-        <a href="{{value.link}}"><img src="{{value.meta.thumb}}" alt="{{value.title}}" width="150px"></a>
-      </div>
-{%endif%}
-      <div class="c s12">
-        <h3><a href="{{value.link}}">{{value.title}}</a></h3>
-        <p>{{value.excerpt}}</p>
-      </div>
-    </section>
-  {%endfor%}
-</article>
-{%endif%}
-
-
-{%endblock%}
 
 
 
